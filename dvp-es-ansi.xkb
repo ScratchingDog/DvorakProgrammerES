@@ -14,8 +14,8 @@ xkb_symbols "basic" {
     key <AE02> { [ bracketleft,     7,              currency                    ], type[Group1] = "FOUR_LEVEL_ALPHABETIC" };
     key <AE03> { [ braceleft,       5,              slash                       ], type[Group1] = "FOUR_LEVEL_ALPHABETIC" };
     key <AE04> { [ braceright,      3,              backslash                   ], type[Group1] = "FOUR_LEVEL_ALPHABETIC" };
-    key <AE05> { [ parenleft,       1,              EuroSign                    ], type[Group1] = "FOUR_LEVEL_ALPHABETIC" };
-    key <AE06> { [ equal,           9,              sterling                    ], type[Group1] = "FOUR_LEVEL_ALPHABETIC" };
+    key <AE05> { [ parenleft,       1,              guillemotleft               ], type[Group1] = "FOUR_LEVEL_ALPHABETIC" };
+    key <AE06> { [ equal,           9,              guillemotright              ], type[Group1] = "FOUR_LEVEL_ALPHABETIC" };
 
     // fila de símbolos, lado derecho
     key <AE07> { [ asterisk,        0                                           ], type[Group1] = "FOUR_LEVEL_ALPHABETIC" };
@@ -36,7 +36,7 @@ xkb_symbols "basic" {
     key <AD07> { [ g,               G                                           ] };
     key <AD08> { [ c,               C                                           ] };
     key <AD09> { [ h,               H                                           ] };
-    key <AD10> { [ l,               L                                           ] };
+    key <AD10> { [ l,               L,              sterling                    ] };
     key <AD11> { [ question,        questiondown                                ] };
     key <AD12> { [ minus,           underscore,     hyphen                      ], type[Group1] = "FOUR_LEVEL_ALPHABETIC" };
     key <BKSL> { [ dead_circumflex, bar                                         ] };
