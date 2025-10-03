@@ -1,0 +1,6 @@
+! layout
+  dvp_es_iso      Spanish (Programmer Dvorak)
+
+! variant
+  dvp_es_iso               Spanish (Programmer Dvorak) miscellaneous options
+  dvp_es_iso:types         Spanish (Programmer Dvorak) XKB types

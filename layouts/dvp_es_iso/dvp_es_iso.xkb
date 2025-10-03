@@ -1,14 +1,13 @@
 // Dvorak ES Programmer, basado en Programmer Dvorak por Roland Kaufmann
-// y adaptado para español para teclado ANSI
+// y adaptado para español para teclado ISO
 
 partial alphanumeric_keys
 xkb_symbols "basic" {
     include "us(dvorak)"
+    name[Group1] = "Spanish - Programmer Dvorak";
 
-    name[Group1] = "Spanish - Dvorak ES Programmer - ANSI";
-
-    //             Sin modificador    Shift           AltGr            Shift+AltGr
-    // fila de símbolos, lado izquierdo
+    //          Sin modificador        Shift          AltGr          Shift+AltGr
+    // fila de símbolos
     key <TLDE> { [ dollar,          asciitilde,     masculine                   ] };
     key <AE01> { [ ampersand,       percent,        ordfeminine                 ] };
     key <AE02> { [ bracketleft,     7,              slash                       ], type[Group1] = "FOUR_LEVEL_SEMIALPHABETIC" };
@@ -16,8 +15,6 @@ xkb_symbols "basic" {
     key <AE04> { [ braceright,      3,              periodcentered              ], type[Group1] = "FOUR_LEVEL_SEMIALPHABETIC" };
     key <AE05> { [ parenleft,       1,              guillemotleft               ], type[Group1] = "FOUR_LEVEL_SEMIALPHABETIC" };
     key <AE06> { [ equal,           9,              guillemotright              ], type[Group1] = "FOUR_LEVEL_SEMIALPHABETIC" };
-
-    // fila de símbolos, lado derecho
     key <AE07> { [ asterisk,        0                                           ], type[Group1] = "FOUR_LEVEL_SEMIALPHABETIC" };
     key <AE08> { [ parenright,      2,              onehalf                     ], type[Group1] = "FOUR_LEVEL_SEMIALPHABETIC" };
     key <AE09> { [ plus,            4                                           ], type[Group1] = "FOUR_LEVEL_SEMIALPHABETIC" };
@@ -66,7 +63,7 @@ xkb_symbols "basic" {
     key <AB08> { [ w,               W                                           ] };
     key <AB09> { [ v,               V                                           ] };
     key <AB10> { [ z,               Z                                           ] };
-    
+
     // teclas compuestas
     include "level3(ralt_switch)"
 };

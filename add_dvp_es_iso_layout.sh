@@ -3,7 +3,7 @@
 EVDEV_DIR="/usr/share/X11/xkb/rules/"
 EVDEV_XML="evdev.xml"
 BACKUP_XML="evdev.xml.bak"
-LAYOUT_NAME="dvp-es-ansi"
+LAYOUT_NAME="dvp-es-iso"
 
 # 0. Ir al directorio
 cd "$EVDEV_DIR"
@@ -21,9 +21,9 @@ fi
 read -r -d '' NEW_LAYOUT << EOM
     <layout>
       <configItem>
-        <name>dvp-es-ansi</name>
+        <name>dvp-es-iso</name>
         <shortDescription>dvp</shortDescription>
-        <description>Spanish (Programmer Dvorak ES ANSI)</description>
+        <description>Español (Programmer Dvorak)</description>
         <languageList>
           <iso639Id>spa</iso639Id>
         </languageList>
@@ -46,11 +46,10 @@ awk -v layout="$NEW_LAYOUT" '
 sudo mv "$TMP_FILE" "$EVDEV_XML"
 
 # 5. Recargar los layout
-# Recarga layout para la sesión actual de X
-#setxkbmap -rules evdev -model pc105 -layout dvp-es-ansi
 # Recarga todo para la sesión actual de X
+sudo setxkbmap
 setxkbmap
 # Recarga completa de XKB
-udevadm trigger --subsystem-match=input --action=change
+sudo udevadm trigger --subsystem-match=input --action=change
 
 echo "Layout añadido exitosamente."

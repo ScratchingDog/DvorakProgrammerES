@@ -1,0 +1,11 @@
+    <layout>
+      <configItem>
+        <name>dvp_es_iso</name>
+        <shortDescription>dvp</shortDescription>
+        <description>Spanish (Programmer Dvorak)</description>
+        <languageList>
+          <iso639Id>und</iso639Id>
+        </languageList>
+      </configItem>
+      <variantList/>
+    </layout>
